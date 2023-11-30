@@ -1,0 +1,50 @@
+.inputLabel{
+    padding: 8px 0;
+}
+.inputLabel--label{
+    padding-bottom: 4px;
+    font-size: 14px;
+}
+.inpt{
+    height: 36px;
+    min-width: 100px;
+    padding-left: 12px;
+    padding-right: 8px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #9f9f9f;
+}
+.inpt:hover{
+    background-color: #F5F5F5;
+}
+.inpt:focus{
+    border-color: #000;
+}
+.inpt--icon{
+    padding-right: 36px;
+}
+.inpt__rad4{
+    border-radius: 4px;
+}
+.inpt__w100{
+    width: 100%;
+}
+.textfield{
+    padding: 8px;
+    border-radius: 4px;
+    min-height: 64px;
+    min-width: 100px;
+    padding-left: 12px;
+    padding-right: 8px;
+    outline: none;
+    border: 1px solid #9f9f9f;
+}
+.textfield:hover{
+    background-color: #F5F5F5;
+}
+.textfield:focus{
+    border-color: #000;
+}
+.textfield__w100{
+    width: 100%;
+}

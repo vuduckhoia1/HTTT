@@ -1,0 +1,18 @@
+.dropdownlist{
+    height: 36px;
+    min-width: 100px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #9f9f9f;
+}
+.dropdownlist:hover{
+    background-color: #F5F5F5;
+}
+.dropdownlist__gray{
+    background-color: #F5F5F5;
+}
+.dropdownlist__gray:hover{
+    background-color: #fff;
+}

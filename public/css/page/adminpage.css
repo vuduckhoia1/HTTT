@@ -1,0 +1,75 @@
+@import url(../page/admin.css);
+.content--box-info{
+    display: flex;
+    padding: 12px 48px;
+    justify-content: space-between;
+}
+.content--box-info--item{
+    height: 80px;
+    width: 330px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 22px;
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.content--box-info--item--icon{
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+.content--box-info--item--icon__blue{
+    color: #3c91e6;
+    background-color: #cfe8ff;
+}
+.content--box-info--item--icon__yellow{
+    color: #ffce26;
+    background-color: #fff2c6;
+}
+.content--box-info--item--icon__orange{
+    color: #fd7238;
+    background-color: #ffe0d3;
+}
+.content--box-info--item--icon i{
+    font-size: 32px;
+}
+.content--box-info--item--content{
+    font-size: 24px;
+    padding: 18px;
+    font-weight: 600;
+}
+.content--box-info--item--title{
+    font-size: 16px;
+    padding-left: 16px;
+    text-transform: uppercase;
+}
+.content--order{
+    margin: 24px 48px;
+    background-color: #fff;
+    height: 440px;
+    border-radius: 22px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.content--order--title{
+    padding: 24px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.content--order--header{
+    padding: 0 24px;
+    background-color: #f2f2f2;
+}
+.content--order--items{
+    height: 300px;
+    overflow: auto;
+    padding: 0 24px;
+}
+.content--order--item{
+    display: grid;
+    grid-template-columns: 300px 200px 150px auto 150px;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 12px 0;
+}

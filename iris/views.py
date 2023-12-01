@@ -241,10 +241,9 @@ class content_view(View):
 
         context['image1'] = data1
 
-        fig2 = plt.figure()
+        fig2 = plt.figure(2)
         plt.annotate(text='Target Values', xy=(110, 0), color='black', family='sans-serif', size='small')
         plt.annotate(text='Test Values', xy=(110, 0.5), color='red', family='sans-serif', size='small', weight='bold')
-        plt.figure(2)
         plt.subplot(121)
         plt.title('Top individual error evolution')
         plt.ylabel('Inverse error')

@@ -37,7 +37,6 @@ class content_view(View):
     def read_data(self):
         IRIS_TRAIN_URL = 'iris/iris_training.csv'
         IRIS_TEST_URL = 'iris/iris_test.csv'
-        # IRIS_URL= 'gdrive/My Drive/cuong/HTDTTT/iris.csv'
 
         names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'species']
         train = pd.read_csv(IRIS_TRAIN_URL, names=names, skiprows=1)
@@ -88,10 +87,6 @@ class content_view(View):
             iris_test_data.append(list(item))
 
         return iris_train_data, iris_test_data
-    # x_train, x_test, y_train, y_test = read_data()
-    # pre_processing(x_train, x_test, y_train, y_test)
-
-
 
     def calculate_fit(self, loss):
         total, fitnesses = sum(loss), []
@@ -196,7 +191,30 @@ class content_view(View):
     def get(self, request):
         context = {}
 
-
+        if 'graphical_error_scale' in request.GET:
+            self.graphical_error_scale = int(request.GET.get('graphical_error_scale'))
+            context['graphical_error_scale'] = self.graphical_error_scale
+        if 'max_iterations' in request.GET:
+            self.max_iterations = int(request.GET.get('max_iterations'))
+            context['max_iterations'] = self.max_iterations
+        if 'pop_size' in request.GET:
+            self.pop_size = int(request.GET.get('pop_size'))
+            context['pop_size'] = self.pop_size
+        if 'mutation_rate' in request.GET:
+            self.mutation_rate = float(request.GET.get('mutation_rate'))
+            context['mutation_rate'] = self.mutation_rate
+        if 'crossover_rate' in request.GET:
+            self.crossover_rate = float(request.GET.get('crossover_rate'))
+            context['crossover_rate'] = self.crossover_rate
+        if 'nodes_input' in request.GET:
+            self.nodes_input = int(request.GET.get('nodes_input'))
+            context['nodes_input'] = self.nodes_input
+        if 'nodes_hidden' in request.GET:
+            self.nodes_hidden = int(request.GET.get('nodes_hidden'))
+            context['nodes_hidden'] = self.nodes_hidden
+        if 'nodes_output' in request.GET:
+            self.nodes_output = int(request.GET.get('nodes_output'))
+            context['nodes_output'] = self.nodes_output
 
         pop = [NeuralNetwork(self.nodes_input, self.nodes_hidden, self.nodes_output) for i in range(self.pop_size)] 
 
@@ -261,11 +279,9 @@ class content_view(View):
 
         context['image2'] = data2
 
-        # plt.show()
+        plt.close()
 
         # print('max_iterations', max_iterations, 'pop_size', pop_size, 'pop_size*0.15', int(
         #     pop_size * 0.15), 'mutation_rate', mutation_rate, 'crossover_rate', crossover_rate,
         #       'nodes_input, nodes_hidden, nodes_output', nodes_input, nodes_hidden, nodes_output)
         return render(request, 'adminpage2.html', context)
-
-

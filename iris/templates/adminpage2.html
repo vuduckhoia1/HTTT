@@ -30,38 +30,38 @@
           </div>
           <div id="input-args">
             <p>Tự nhập tham số:</p>
-            <form class="form-args">
+            <form class="form-args" action="/content">
               <div>
                 <label class="inputLabel inputLabel--label" for="graphical_error_scale">Graphical Error Scale:</label>
-                <input class="inpt" type="number" name="graphical_error_scale" id="graphical_error_scale">
+                <input class="inpt" type="number" step="0.01" name="graphical_error_scale" id="graphical_error_scale">
               </div>
               <div>
                 <label class="inputLabel inputLabel--label" for="max_iterations">Max iterations:</label>
-                <input class="inpt" type="number" name="max_iterations" id="max_iterations">
+                <input class="inpt" type="number" step="0.01" name="max_iterations" id="max_iterations">
               </div>
               <div>
                 <label class="inputLabel inputLabel--label" for="pop_size">Pop Size:</label>
-                <input class="inpt" type="number" name="pop_size" id="pop_size">
+                <input class="inpt" type="number" step="0.01" name="pop_size" id="pop_size">
               </div>
               <div>
                 <label class="inputLabel inputLabel--label" for="mutation_rate">Mutation Rate:</label>
-                <input class="inpt" type="number" name="mutation_rate" id="mutation_rate">
+                <input class="inpt" type="number" step="0.01" name="mutation_rate" id="mutation_rate">
               </div>
               <div>
                 <label class="inputLabel inputLabel--label" for="crossover_rate">CrossOver Rate:</label>
-                <input class="inpt" type="number" name="crossover_rate" id="crossover_rate">
+                <input class="inpt" type="number" step="0.01" name="crossover_rate" id="crossover_rate">
               </div>
               <div>
                 <label class="inputLabel inputLabel--label" for="nodes_input">Nodes Input:</label>
-                <input class="inpt" type="number" name="nodes_input" id="nodes_input">
+                <input class="inpt" type="number" step="0.01" name="nodes_input" id="nodes_input">
               </div>
               <div>
                 <label class="inputLabel inputLabel--label" for="nodes_hidden">Nodes Hidden:</label>
-                <input class="inpt" type="number" name="nodes_hidden" id="nodes_hidden">
+                <input class="inpt" type="number" step="0.01" name="nodes_hidden" id="nodes_hidden">
               </div>
               <div>
                 <label class="inputLabel inputLabel--label" for="nodes_output">Nodes Output:</label>
-                <input class="inpt" type="number" name="nodes_output" id="nodes_output">
+                <input class="inpt" type="number" step="0.01" name="nodes_output" id="nodes_output">
               </div>
               <button class="btn" type="submit">Chạy</button>
             </form>
@@ -72,14 +72,14 @@
           <div class="text-result box">
             <span>Tham số</span>
             <ul id="ul3">
-              <li>Tham số 1: 123</li>
-              <li>Tham số 1: 123</li>
-              <li>Tham số 1: 123</li>
-              <li>Tham số 1: 123</li>
-              <li>Tham số 1: 123</li>
-              <li>Tham số 1: 123</li>
-              <li>Tham số 1: 123</li>
-              <li>Tham số 1: 123</li>
+              <li>graphical_error_scale: {{ graphical_error_scale }}</li>
+              <li>max_iterations: {{ max_iterations }}</li>
+              <li>pop_size: {{ pop_size }}</li>
+              <li>mutation_rate: {{ mutation_rate }}</li>
+              <li>crossover_rate: {{ crossover_rate }}</li>
+              <li>nodes_input: {{ nodes_input }}</li>
+              <li>nodes_hidden: {{ nodes_hidden }}</li>
+              <li>nodes_output: {{ nodes_output }}</li>
             </ul>
           </div>
           <div class="img1 box">

@@ -123,6 +123,10 @@ ul, li{
     gap: 20px;
 }
 
+.form-args label, .form-args input {
+    display: inline-block;
+}
+
 #auto-args{
     display: flex;
     justify-content: center;
@@ -141,7 +145,7 @@ ul, li{
     height: fit-content;
 }
 input {
-    margin-left: 60px;
+    margin-left: 30px;
 }
 #auto-args button {
     width: 200%;
@@ -168,14 +172,32 @@ input {
     grid-template-rows: repeat(2, 1fr);
     gap: 1px; 
 }
-.box{
-    /* border: 1px solid #b1b0b0; */
+.form-args div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end !important;
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
 .img1{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    width: 527;
+    height: 391;
 }
 .img1 p {
     font-size: 15px;
@@ -185,7 +207,7 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 175px;
+    padding-left: 30px;
 }
 span{
     font-size: 20px;

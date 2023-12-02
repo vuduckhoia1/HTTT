@@ -26,13 +26,12 @@
       <div class="content-data">
         <div class="main">
           <div id="auto-args">
-            <button class="btn">Tự động tìm tham số tốt nhất</button>
           </div>
           <div id="input-args">
             <p>Tự nhập tham số:</p>
             <form class="form-args" action="/content">
               <div>
-                <label class="inputLabel inputLabel--label" for="graphical_error_scale">Graphical Error Scale:</label>
+                <label class="inputLabel inputLabel--label" for="graphical_error_scale">Graphical error scale:</label>
                 <input class="inpt" type="number" step="0.01" name="graphical_error_scale" id="graphical_error_scale">
               </div>
               <div>
@@ -70,26 +69,53 @@
         </div>
         <div class="main2">
           <div class="text-result box">
-            <span>Tham số</span>
-            <ul id="ul3">
-              <li>graphical_error_scale: {{ graphical_error_scale }}</li>
-              <li>max_iterations: {{ max_iterations }}</li>
-              <li>pop_size: {{ pop_size }}</li>
-              <li>mutation_rate: {{ mutation_rate }}</li>
-              <li>crossover_rate: {{ crossover_rate }}</li>
-              <li>nodes_input: {{ nodes_input }}</li>
-              <li>nodes_hidden: {{ nodes_hidden }}</li>
-              <li>nodes_output: {{ nodes_output }}</li>
-            </ul>
+            <table>
+              <tr>
+                <th>Label</th>
+                <th>Tham số</th>
+              </tr>
+              <tr>
+                <td>Graphical_error_scale</td>
+                <td>{{ graphical_error_scale }}</td>
+              </tr>
+              <tr>
+                <td>Max_iterations</td>
+                <td>{{ max_iterations }}</td>
+              </tr>
+              <tr>
+                <td>Pop_size</td>
+                <td>{{ pop_size }}</td>
+              </tr>
+              <tr>
+                <td>Mutation_rate</td>
+                <td>{{ mutation_rate }}</td>
+              </tr>
+              <tr>
+                <td>Crossover_rate</td>
+                <td>{{ crossover_rate }}</td>
+              </tr>
+              <tr>
+                <td>Nodes_input</td>
+                <td>{{ nodes_input }}</td>
+              </tr>
+              <tr>
+                <td>Nodes_hidden</td>
+                <td>{{ nodes_hidden }}</td>
+              </tr>
+              <tr>
+                <td>Nodes_output</td>
+                <td>{{ nodes_output }}</td>
+              </tr>
+            </table>
           </div>
           <div class="img1 box">
             {{ image1|safe }}
             <!-- <img width="527" height="391" src="" alt=""> -->
-            <p>Tiêu đề ảnh</p>
+            {% comment %} <p>Tiêu đề ảnh</p> {% endcomment %}
           </div>
           <div class="img1 box">
             {{ image2|safe }}
-            <p>Tiêu đề ảnh</p>
+            {% comment %} <p>Tiêu đề ảnh</p> {% endcomment %}
           </div>
 
         </div>

@@ -168,10 +168,31 @@ input {
     margin: 20px;
     border-radius: 16px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
     gap: 1px; 
+    grid-template-areas:
+        'box1 box2'
+        'box3 box3';
 }
+.box {
+    padding: 10px;
+    border-radius: 8px;
+    height: 391px;
+    width: 100%;
+  }
+  
+  .text-result {
+    grid-area: box1; 
+  }
+  
+  .img1 {
+    grid-area: box2; 
+  }
+  
+  .img2 {
+    grid-area: box3; 
+  }
 .form-args div{
     display: flex;
     flex-direction: row;

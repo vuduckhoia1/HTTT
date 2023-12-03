@@ -262,6 +262,7 @@ class content_view(View):
         context['image1'] = data1
 
         fig2 = plt.figure(2)
+        fig2 = plt.figure(figsize=(15, 5))
         plt.annotate(text='Target Values', xy=(110, 0), color='black', family='sans-serif', size='small')
         plt.annotate(text='Test Values', xy=(110, 0.5), color='red', family='sans-serif', size='small', weight='bold')
         plt.subplot(121)
@@ -283,7 +284,5 @@ class content_view(View):
 
         plt.close()
 
-        # print('max_iterations', max_iterations, 'pop_size', pop_size, 'pop_size*0.15', int(
-        #     pop_size * 0.15), 'mutation_rate', mutation_rate, 'crossover_rate', crossover_rate,
-        #       'nodes_input, nodes_hidden, nodes_output', nodes_input, nodes_hidden, nodes_output)
+
         return render(request, 'adminpage2.html', context)

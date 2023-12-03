@@ -37,7 +37,7 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .content--sidebar--items{
-    height: calc(100vh - 56px - 48px);
+    height: 100vh;
     overflow: auto;
     background-color: #fff;
     padding: 24px 0;
